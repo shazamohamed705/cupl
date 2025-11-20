@@ -1,11 +1,11 @@
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useParams } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import HomePage from "./pages/HomePage/HomePage";
 import Coupon from "./pages/CouponPage/Coupon";
 import Coupont from "./pages/CouponTwo/Coupont";
 import CouponThree from "./pages/CouponThree/CouponThree";
 import CouponFour from "./pages/CouponFour/CouponFour";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { DataContext } from "./contextApi/DataContext";
 import StaticPage from "./pages/StaticPage/StaticPage";
 import RedirectOne from "./pages/redirectone/RedirectOne";
@@ -19,75 +19,112 @@ import CouponSix from "./pages/CouponSix/CouponSix";
 import Contact from "./pages/Contact/Contact";
 import TrendyolLanding from "./pages/TrendyolLanding/TrendyolLanding";
 
-const DetermineElement = ({ data }) => {
-  const navigate = useNavigate();
+const redirectMap = {
+  default: {
+    0: <DefaultPage />,
+  },
+  default_1: {
+    1: <RedirectOne />,
+    0: <Coupon />,
+  },
+  default_2: {
+    1: <RedirectTwoPage />,
+    0: <Coupont />,
+  },
+  default_3: {
+    1: <RedirectThreePage />,
+    0: <CouponThree />,
+  },
+  default_4: {
+    1: <RedirectFourPage />,
+    0: <CouponFour />,
+  },
+  default_5: {
+    1: <RedirectFourPage />,
+    0: <CouponFive />,
+  },
+  default_6: {
+    1: <RedirectFourPage />,
+    0: <CouponSix />,
+  },
+  default_7: {
+    1: <RedirectFourPage />,
+    0: <TrendyolLanding />,
+  },
+};
 
-  const theme = data?.domain?.theme?.name ?? 'default';
-  const fakePage = data?.data?.coupons?.fake_page ?? 0;
+const couponThemeMap = {
+  default_1: <Coupon />,
+  default_2: <Coupont />,
+  default_3: <CouponThree />,
+  default_4: <CouponFour />,
+  default_5: <CouponFive />,
+  default_6: <CouponSix />,
+  default_7: <TrendyolLanding />,
+};
 
-  const redirectMap = {
-    default: {
-      0: <DefaultPage />,
-    },
-    default_1: {
-      1: <RedirectOne />,
-      0: <Coupon />,
-    },
-    default_2: {
-      1: <RedirectTwoPage />,
-      0: <Coupont />,
-    },
-    default_3: {
-      1: <RedirectThreePage />,
-      0: <CouponThree />,
-    },
-    default_4: {
-      1: <RedirectFourPage />,
-      0: <CouponFour />,
-    },
-    default_5: {
-      1: <RedirectFourPage />,
-      0: <CouponFive />,
-    },
-    default_6: {
-      1: <RedirectFourPage />,
-      0: <CouponSix />,
-    },
-    default_7: {
-      1: <RedirectFourPage />,
-      0: <TrendyolLanding />,
-    },
-  };
+const loaderStyles = {
+  minHeight: "100vh",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: "#fff",
+};
 
-  if (theme && fakePage !== undefined) {
-    return redirectMap[theme]?.[fakePage] || null;
+const AppLoader = () => (
+  <div style={loaderStyles} aria-live="polite">
+    <div className="spinner-border text-success" role="status" aria-label="Loading content" />
+  </div>
+);
+
+const DetermineElement = () => {
+  const { id } = useParams();
+  const { data, loading, setId } = useContext(DataContext);
+
+  useEffect(() => {
+    if (id) {
+      setId(id);
+    }
+  }, [id, setId]);
+
+  if (loading || !data) {
+    return <AppLoader />;
   }
 
   if (data === "notFound") {
-    navigate("*");
+    return <NotFound />;
   }
 
-  return null;
+  const theme = data?.domain?.theme?.name ?? "default";
+  const fakePage = data?.data?.coupons?.fake_page ?? 0;
+
+  return redirectMap[theme]?.[fakePage] || <DefaultPage />;
 };
 
-const CouponPage = ({ data }) => {
+const CouponPage = () => {
+  const { id } = useParams();
+  const { data, loading, setId } = useContext(DataContext);
+
+  useEffect(() => {
+    if (id) {
+      setId(id);
+    }
+  }, [id, setId]);
+
+  if (loading || !data) {
+    return <AppLoader />;
+  }
+
+  if (data === "notFound") {
+    return <NotFound />;
+  }
+
   const theme = data?.domain?.theme?.name;
 
-  const themeMap = {
-    default_1: <Coupon />,
-    default_2: <Coupont />,
-    default_3: <CouponThree />,
-    default_4: <CouponFour />,
-    default_5: <CouponFive />,
-    default_6: <CouponSix />,
-    default_7: <TrendyolLanding />,
-  };
-
-  return themeMap[theme] || <DefaultPage />;
+  return couponThemeMap[theme] || <DefaultPage />;
 };
 
 function App() {
-  const { data } = useContext(DataContext);
   return (
     <Router>
       <Routes>
@@ -99,12 +136,12 @@ function App() {
         <Route
           exact
           path="/coupon/:id"
-          element={<CouponPage data={data} />}
+          element={<CouponPage />}
         />
         <Route
           exact
           path="/:id"
-          element={<DetermineElement data={data} />}
+          element={<DetermineElement />}
         />
         <Route path="*" element={<NotFound />} />
         <Route exact path="/trendyol" element={<TrendyolLanding />} />
