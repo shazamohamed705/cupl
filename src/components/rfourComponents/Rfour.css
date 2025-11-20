@@ -1,0 +1,42 @@
+.Rfour{
+    min-height:418px;
+}
+.Rfour .ContentFour_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+.Rfour .ContentFour_content_header h1{
+    margin-bottom: 35px;
+}
+.Rfour .ContentFour_content_header p{
+    margin-bottom: 0;
+}
+.Rfour_btn{
+    background: #011B3C;
+}
+.Rfour_span{
+    color: #011B3C;
+}
+.ContentFour_content_header .Rfour_confirmTitle{
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 22.4px */
+}
+@media(max-width:767px){
+   .ContentFour_content_header .Rfour_confirmTitle{
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* 22.4px */
+    }
+}

@@ -1,0 +1,16 @@
+.LogoFour{
+    width: 388px;
+    height: 146px;
+    display: flex;
+    justify-content: center;
+}
+.LogoFour img{
+    max-width:100%;
+    object-fit: contain;
+}
+@media(max-width:767px){
+    .LogoFour{
+        width: 300px;
+        height: 113px;
+    }
+}

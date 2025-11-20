@@ -1,0 +1,39 @@
+.ThreeInfo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    gap: 60px;
+}
+.ThreeInfo_line{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.ThreeInfo_line span{
+    color: #3D5E46;
+    font-size: 18px;
+    font-weight: 500;
+}
+@media(max-width:767px){
+    .ThreeInfo{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 20px;
+    }
+    .ThreeInfo_line{
+        color: #011B3C;
+        font-size: 14px;
+    }
+    .ThreeInfo_line span{
+        color: #011B3C;
+        font-size: 14px;
+    }
+}

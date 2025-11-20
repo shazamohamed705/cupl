@@ -1,0 +1,36 @@
+.ShareFour{
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ShareFour h4{
+    color: #011B3C;
+    text-align: center;
+    font-family: Cairo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.ShareFour_btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.ShareFour_btns i{
+    font-size: 24px;
+}
+@media(max-width:767px){
+    .ShareFour{
+        padding: 5px 0;
+    }
+    .ShareFour_btns{
+        gap: 10px;
+    }
+}

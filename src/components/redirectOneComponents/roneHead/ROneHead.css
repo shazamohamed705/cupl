@@ -1,0 +1,94 @@
+.ROneHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.ROneHead_logo{
+    border-radius: 8px;
+    border: 2px solid #3D5E46;  
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.ROneHead_logo img{
+    max-width: 100%;
+    object-fit: cover;
+}
+.ROneHead h1{
+    color: #3D5E46;
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+.pleaseConfirm{
+    color: #4AA262;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 22.4px */
+    margin: 0;
+}
+.RobotBtn{
+    border: none;
+    outline: none;
+    padding: 16px 0;
+    border-radius: 20px;
+    background: var(--d-9-d-9-d-9, #4AA262);
+    width: 263px;
+    height: 55px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 100% */
+}
+.checkSpamTitle{
+    color: #4AA262;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.notrobottitle{
+    color: #3D5E46;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+@media(max-width:767px){
+    .ROneHead_logo{
+        border-radius: 8px;
+        border: 2px solid #3D5E46;  
+        width: 120px;
+        height: 120px;
+    } 
+    .ROneHead h1{
+        font-size: 24px;
+    }
+    .pleaseConfirm{
+        font-size: 16px;
+    }
+    .checkSpamTitle{
+        font-size: 15px;
+    }
+    .notrobottitle{
+        color: #3D5E46;
+        text-align: center;
+        font-size: 15px;
+    }
+}

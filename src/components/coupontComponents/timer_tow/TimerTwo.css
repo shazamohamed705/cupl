@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+.TimerTwo h1{
+    display: none !important;
+}
+.card__top,.card__bottom{
+    color: #000 !important;
+}
+.flip-countdown.theme-light{
+    --text-color: #000 !important;
+}

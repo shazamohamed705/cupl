@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+.ContentFour{
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    padding: 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+.ContentFour .offer{
+    color: #FFF;
+    text-align: center;
+    font-family: Cairo;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 125%; /* 27.5px */
+
+    background: #f00;
+    padding: 2px 55px;
+    position: absolute;
+    top: 45px;
+    left: -45px;
+    transform: rotate(-45deg);
+}
+.ContentFour_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ContentFour_content_header h1{
+    color: #011B3C;
+    text-align: center;
+    font-family: Cairo;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+.ContentFour_content_header p{
+    color: rgba(1, 27, 60, 0.70);
+    text-align: center;
+    font-family: Cairo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 28px */
+    margin: 0;
+    margin-bottom: 30px;
+}
+.ContentFour_content_countDown{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+    width: 200px;
+}
+.ContentFour_content_countDown span{
+    color: #011B3C;
+    text-align: center;
+    font-family: Cairo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    /* line-height: normal; */
+}
+.ContentFour_content_countDown h2{
+    position: relative;
+    direction: ltr;
+    overflow-y: hidden;
+    /* text-align: center; */
+    margin: 0 !important;
+    width: 100%;
+    /* width: 1100px; */
+    /* width: fit-content; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+}
+.ContentFour_content_countDown h2 span{
+    color: #011B3C;
+    /* text-align: center; */
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1px;
+    flex: 1;
+}
+.ContentFour_content_copyBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.ContentFour_content_copyBtn input{
+    width: 268px;
+    height: 78px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: #F9F9F9;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%23011B3CFF' stroke-width='5' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 12px;
+
+    color: #011B3C;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    
+}
+.ContentFour_content_copyBtn button{
+    border: none;
+    outline: none;
+    width: 268px;
+    height: 78px;
+    border-radius: 12px;
+    background: rgb(1, 27, 60);
+
+    color: #FFF;
+    text-align: center;
+    font-family: Cairo;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-bottom: 10px;
+    transition: all .3s;
+}
+.ContentFour_content_copyBtn button a{
+    text-decoration: none;
+    color: #FFF;
+    text-align: center;
+    font-family: Cairo;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.ContentFour_content_copyBtn button:hover{
+    background: rgb(1, 27, 60,.8);
+}
+.visitFour{
+    color: #011B3C;
+    text-align: center;
+    font-family: Cairo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    /* text-decoration-line: underline; */
+}
+@media(max-width:767px){
+    .ContentFour_content_header h1{
+        font-size: 20px;
+    }
+    .ContentFour_content_header p{
+        font-size: 16px;
+    }
+    .ContentFour_content_countDown span{
+        font-size: 16px;
+    }
+    .ContentFour_content_countDown h2{
+        font-size: 32px;
+    }
+    .ContentFour_content_copyBtn input{
+        width: 230px;
+        height: 67px;
+        font-size: 32px;
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%23011B3CFF' stroke-width='5' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='square'/%3e%3c/svg%3e");
+        border-radius: 12px;
+    }
+    .ContentFour_content_copyBtn button{
+        width: 230px;
+        height: 67px;
+        font-size: 26px;
+    }
+    .ContentFour_content_copyBtn button a{
+        /* width: fit-content; */
+        font-size: 24px;
+    }
+    .visitFour{
+        font-size: 16px;
+    }
+    .ContentFour .offer{
+        font-size: 16px;
+        padding: 2px 55px;
+        position: absolute;
+        top: 20px;
+        left: -50px;
+        transform: rotate(-45deg);
+    }
+}
+.sec{
+    animation: moveFromBottomToTop 1s ease-out;
+    position: relative;
+    top: 100px;
+    right: 0;
+    /* width: 100px; */
+}
+@keyframes moveFromBottomToTop {
+    0% {
+       top:  5px;
+    }
+    50%{
+        top: 0px;
+    }
+    75%{
+    }
+    100% {
+      top: -50px
+    }
+  }

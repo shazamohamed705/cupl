@@ -1,0 +1,217 @@
+.CopyPart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.btnCopy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.btnCopy input{
+    width: 250px;
+    height: 60px;
+    border: 2px solid #000;
+    outline: none;
+    background: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 125%;
+    letter-spacing: 3px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    animation: codeGlow 2s ease-in-out infinite alternate;
+    transition: all 0.3s ease;
+}
+
+@keyframes codeGlow {
+    0% {
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        border-color: #000;
+    }
+    100% {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        border-color: #333;
+    }
+}
+
+.btnCopy input:hover {
+    transform: scale(1.05);
+    border-color: #333;
+}
+.btnCopy button{
+    border: none;
+    outline: none;
+    background: #000;
+    width: 250px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btnCopy button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btnCopy button:hover::before {
+    left: 100%;
+}
+
+.btnCopy button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #333 0%, #000 100%);
+}
+
+.btnCopy button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+.btn_copy2 button{
+    background: #000;
+    border: 1px solid #000;
+
+}
+.shareBtnsVisit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.shareBtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.shareBtn button, .shareBtn a{
+    border: none;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: buttonFloat 2s ease-in-out infinite;
+}
+
+@keyframes buttonFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.shareBtn button:hover, .shareBtn a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 1);
+}
+.shareBtn span{
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 125%; /* 15px */
+}
+.shareCotainer{
+    min-width: 200px;
+    height: 60px;
+    border-radius: 20px;
+    border: 2px solid #FF6B35;
+    background: rgba(255, 255, 255, 0.95);
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 0 25px;
+    display: none;
+    transition: all 0.6s ease;
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+    animation: shareSlideIn 0.5s ease-out;
+}
+
+@keyframes shareSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.shareCotainer i{
+    font-size: 32px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.shareCotainer i:hover {
+    transform: scale(1.2);
+    background: rgba(255, 107, 53, 0.1);
+}
+.active_share{
+    display: flex;
+}
+@media(max-width:767px){
+    .btnCopy button{
+        width: 220px;
+        height: 55px;
+        font-size: 18px;
+    }
+    .btnCopy input{
+        width: 220px;
+        height: 55px;
+        font-size: 28px;
+    }
+    .shareBtnsVisit{
+        gap: 20px;
+    }
+    .shareBtn button, .shareBtn a{
+        padding: 12px;
+    }
+    .shareCotainer{
+        min-width: 180px;
+        height: 55px;
+        gap: 12px;
+        padding: 0 20px;
+    }
+    .shareCotainer i{
+        font-size: 28px;
+    }
+}

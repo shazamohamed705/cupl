@@ -1,0 +1,177 @@
+.CouponFour_main{
+    width: 100%;
+    min-height: 100vh !important;
+    background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 50%, #45B7D1 100%);
+    background-size: 400% 400%;
+    animation: gradientFlow 12s ease infinite;
+    display: flex;
+    justify-content: flex-start;
+    direction: rtl;
+    position: relative;
+    overflow: hidden;
+    /* Improve initial render performance by skipping offscreen rendering */
+    content-visibility: auto;
+    contain-intrinsic-size: 600px 800px; /* Fallback size to avoid layout shift */
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.CouponFour_main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%),
+        radial-gradient(circle at 10% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+        radial-gradient(circle at 90% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    animation: floatingOrbs 8s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes floatingOrbs {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+    }
+    50% {
+        transform: translateY(-20px) scale(1.1);
+    }
+}
+
+/* RTL/LTR Support */
+.CouponFour_main.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.CouponFour_main.ltr {
+  direction: ltr;
+  text-align: left;
+}
+.CouponFour_main .CouponFour_container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+    animation: containerSlideIn 1.2s ease-out;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 40px 30px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        0 0 50px rgba(255, 107, 107, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    max-width: 600px;
+    margin: 20px auto;
+    /* direction: rtl; */
+}
+
+.CouponFour_main .CouponFour_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    border-radius: 25px;
+    animation: containerShimmer 3s infinite;
+    z-index: -1;
+}
+
+@keyframes containerShimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.CouponFour_main .CouponFour_container::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1);
+    border-radius: 27px;
+    z-index: -2;
+    opacity: 0.3;
+    animation: containerBorderGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes containerBorderGlow {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes containerSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Responsive spacing and container width */
+@media (max-width: 768px) {
+  .CouponFour_main .CouponFour_container{
+    gap: 20px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    margin: 15px;
+  }
+  
+  .CouponFour_main::before {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .CouponFour_main .CouponFour_container{
+    gap: 15px;
+    padding: 25px 15px;
+    border-radius: 15px;
+    margin: 10px;
+  }
+  
+  .CouponFour_main::before {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: 1200px) {
+  .CouponFour_main .CouponFour_container{
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

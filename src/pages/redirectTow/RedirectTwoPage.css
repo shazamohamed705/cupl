@@ -1,0 +1,14 @@
+.redirectTowMain{
+    justify-content: flex-start !important;
+}
+
+/* RTL/LTR Support */
+.redirectTowMain.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.redirectTowMain.ltr {
+  direction: ltr;
+  text-align: left;
+}

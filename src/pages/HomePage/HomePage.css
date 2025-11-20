@@ -1,0 +1,173 @@
+/* HomePage Styles - Enhanced Black, White & Gold Color System */
+:root {
+  /* Primary Colors - Dark Sections */
+  --primary-gradient: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  --primary-dark: #000000;
+  --primary-dark-light: #1a1a1a;
+  --primary-dark-lighter: #2d2d2d;
+  
+  /* Secondary Colors - Gold Accents */
+  --gold-primary: #ffd700;
+  --gold-light: #ffed4e;
+  --gold-dark: #b8860b;
+  --gold-accent: #ffc107;
+  
+  /* White & Light Colors - Light Sections */
+  --white-primary: #ffffff;
+  --white-off: #fafafa;
+  --white-light: #f5f5f5;
+  --white-medium: #e8e8e8;
+  
+  /* Text Colors - Optimized for Contrast */
+  --text-on-dark: #ffffff;
+  --text-on-light: #000000;
+  --text-secondary-dark: rgba(255, 255, 255, 0.8);
+  --text-secondary-light: #333333;
+  --text-muted-dark: rgba(255, 255, 255, 0.6);
+  --text-muted-light: #666666;
+  --text-gold: #ffd700;
+  
+  /* Background Colors - Section Specific */
+  --bg-dark-section: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  --bg-light-section: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+  --bg-card-dark: rgba(255, 255, 255, 0.05);
+  --bg-card-light: rgba(255, 255, 255, 0.95);
+  --bg-overlay-dark: rgba(0, 0, 0, 0.8);
+  --bg-overlay-light: rgba(255, 255, 255, 0.9);
+  
+  /* Border Colors - Context Aware */
+  --border-dark: rgba(255, 215, 0, 0.3);
+  --border-light: #e0e0e0;
+  --border-gold: #ffd700;
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  
+  /* Shadow Colors - Enhanced */
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-gold: rgba(255, 215, 0, 0.2);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-card-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+  
+  /* Button Colors - Interactive Elements */
+  --btn-primary: linear-gradient(45deg, #ffd700 0%, #ffed4e 100%);
+  --btn-secondary: transparent;
+  --btn-text-primary: #000000;
+  --btn-text-secondary: #ffffff;
+  --btn-border: #ffd700;
+  
+  /* Status Colors - Functional */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #06b6d4;
+}
+
+.homepage {
+  min-height: 100vh;
+  background: var(--bg-dark-section);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.homepage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../../assets/images/bgbody.png') center/cover no-repeat;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.homepage > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Error and No Data States */
+.error-container,
+.no-data-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-dark-section);
+  color: var(--text-on-dark);
+  text-align: center;
+}
+
+.error-content,
+.no-data-content {
+  background: var(--bg-card-dark);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 500px;
+  margin: 0 1rem;
+  border: 1px solid var(--border-dark);
+}
+
+.error-content h2,
+.no-data-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-on-dark);
+}
+
+.error-content p,
+.no-data-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.retry-btn {
+  background: var(--btn-primary);
+  color: var(--btn-text-primary);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-gold);
+}
+
+.retry-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .error-content,
+  .no-data-content {
+    padding: 2rem;
+    margin: 0 0.5rem;
+  }
+  
+  .error-content h2,
+  .no-data-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .error-content p,
+  .no-data-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-content,
+  .no-data-content {
+    padding: 1.5rem;
+  }
+  
+  .error-content h2,
+  .no-data-content h2 {
+    font-size: 1.3rem;
+  }
+}

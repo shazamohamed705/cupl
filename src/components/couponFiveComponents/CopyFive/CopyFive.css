@@ -1,0 +1,85 @@
+.CopyCode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.codeBox {
+  /* width: 100%; */
+  /* margin: auto; */
+  margin-bottom: 20px;
+}
+.codeBox input {
+  padding: 15px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  border: 2px dashed #000;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  /* line-height: normal; */
+}
+.buttonsCopy {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.buttonsCopy button {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #000;
+  outline: none;
+  border-radius: 50px;
+  font-size: 24px;
+  padding: 10px;
+  line-height: 1.5;
+  transition: all 0.3s ease-in-out;
+}
+.buttonsCopy button:hover {
+  background: #000;
+  color: #fff;
+}
+.buttonsCopy a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 50px;
+  line-height: 1.5;
+  font-size: 24px;
+  background: #000;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.buttonsCopy a:hover {
+  color: yellow;
+}
+@media (max-width: 994px) {
+  .codeBox input {
+    width: 100%;
+    font-size: 32px;
+    padding: 0px 0;
+  }
+}
+@media (max-width: 767px) {
+  .buttonsCopy button {
+    line-height: 1;
+    font-size: 22px;
+    padding: 12px;
+  }
+  .buttonsCopy a {
+    line-height: 1;
+    font-size: 22px;
+    padding: 12px;
+  }
+  .codeBox input {
+    line-height: normal;
+  }
+}

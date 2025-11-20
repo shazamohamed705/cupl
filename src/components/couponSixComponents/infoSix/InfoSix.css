@@ -1,0 +1,33 @@
+.InfoSix {
+  border-top: 1px dashed rgba(145, 158, 171, 0.2);
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.InfoSix .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.InfoSix .info h6 {
+  color: #637381;
+  text-align: center;
+  font-family: "cairo";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 150% */
+}
+.InfoSix .info span {
+  color: #212b36;
+  text-align: center;
+  font-family: "cairo";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 184.615% */
+}

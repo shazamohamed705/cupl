@@ -1,0 +1,101 @@
+.CoupounTInfo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.CoupounTInfo .info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.CoupounTInfo .info .info_line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    padding: 12px 18px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 125%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: infoSlideIn 0.8s ease-out;
+}
+
+@keyframes infoSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.CoupounTInfo .info .info_line:nth-child(1) {
+    border-color: #4A90E2;
+    animation-delay: 0.1s;
+}
+
+.CoupounTInfo .info .info_line:nth-child(1) svg {
+    color: #4A90E2;
+}
+
+.CoupounTInfo .info .info_line:nth-child(2) {
+    border-color: #50C878;
+    animation-delay: 0.2s;
+}
+
+.CoupounTInfo .info .info_line:nth-child(2) svg {
+    color: #50C878;
+}
+
+.CoupounTInfo .info .info_line:nth-child(3) {
+    border-color: #FF6B6B;
+    animation-delay: 0.3s;
+}
+
+.CoupounTInfo .info .info_line:nth-child(3) svg {
+    color: #FF6B6B;
+}
+
+.CoupounTInfo .info .info_line:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+@media(max-width:767px){
+    .CoupounTInfo .info .info_line{
+        font-size: 14px;
+        padding: 12px 16px;
+        gap: 8px;
+    }  
+    .CoupounTInfo .info{
+        margin-bottom: 40px;
+        gap: 15px;
+        justify-content: center;
+    }
+    .CoupounTInfo{
+        padding-top: 20px;
+    }
+}

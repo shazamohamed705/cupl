@@ -1,0 +1,27 @@
+.infoCoupon {
+  margin-top: 20px;
+}
+.infoCoupon ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.infoCoupon ul li p {
+  line-height: 27px;
+}
+.infoCoupon ul li span {
+  font-weight: bold;
+  color: #2980b9;
+}
+.couponContent p {
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  .couponContent p {
+    font-size: 15px;
+  }
+}

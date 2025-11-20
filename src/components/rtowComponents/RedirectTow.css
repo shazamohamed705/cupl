@@ -1,0 +1,106 @@
+.RedirectTow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+.RedirectTow_head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.RedirectTow_logo{
+    border-radius: 100px;
+    border: 2px solid #3D5E46;
+    width: 185px;
+    height: 185px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.RedirectTow_logo img{
+    max-width: 100%;
+    object-fit: contain;
+}
+.RedirectTow_head h1{
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%; /* 50px */
+    margin: 0;
+}
+.RedirectTow_head h1 span{
+    color: #EC0000;
+}
+.RedirectTow_pleaseConfirm{
+    color: rgba(1, 27, 60, 0.70);
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 22.4px */
+    margin: 0;
+}
+.RedirectTow_RobotBtn{
+    border: none;
+    outline: none;
+    padding: 16px 0;
+    border-radius: 10px;
+    background: #000;
+    width: 272px;
+    height: 65px;
+
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 100% */
+}
+.RedirectTow_checkSpamTitle{
+    color: #011B3C;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.RedirectTow_notrobottitle{
+    color: #000;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.RedirectTow_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+@media(max-width:767px){
+    .RedirectTow_logo{
+        width: 149px;
+        height: 129px;
+    }
+    .RedirectTow_head{
+        gap: 20px;
+    }
+    .RedirectTow_head h1{
+        font-size: 24px;
+    }
+    .RedirectTow_pleaseConfirm{
+        font-size: 16px;
+    }
+    .RedirectTow_checkSpamTitle{
+        font-size: 15px;
+    }
+
+}

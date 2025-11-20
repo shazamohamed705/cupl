@@ -1,0 +1,325 @@
+/* RedirectOne.css - Exact Noon Design */
+
+/* Main container with Noon-like yellow background */
+main {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    background: #FFD700;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px, 30px 30px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Abstract shapes like in Noon image */
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: #2E7D32;
+    border-radius: 50% 0 0 0;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+main::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 250px;
+    height: 250px;
+    background: #FF5722;
+    border-radius: 0 0 0 50%;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+/* Main content container - exact Noon style */
+.redirect-container {
+    position: relative;
+    z-index: 2;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 30px 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    margin: 20px auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Logo styling - exact Noon style */
+.redirect-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.redirect-logo img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* Title styling - exact Noon style */
+.redirect-title {
+    color: #333;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+}
+
+/* Description styling - exact Noon style */
+.redirect-description {
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0 0 25px 0;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Coupon code box - exact Noon style */
+.coupon-code-box {
+    background: #fff;
+    border: 2px dashed #333;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin: 0 auto 15px;
+    max-width: 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.coupon-code {
+    font-size: 24px;
+    font-weight: 900;
+    color: #000;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* Copy button - exact Noon style */
+.redirect-button {
+    background: #2E7D32;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.3);
+    margin: 0 auto 25px;
+    display: block;
+}
+
+.redirect-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.4);
+}
+
+.redirect-button:active {
+    transform: scale(0.95);
+}
+
+/* Information section - exact Noon style */
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    background: #f5f5f5;
+    border-radius: 15px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #333;
+    flex: 1;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.info-item i {
+    font-size: 14px;
+    color: #666;
+}
+
+.info-item .location { color: #2196F3; }
+.info-item .discount { color: #4CAF50; }
+.info-item .expiry { color: #FF9800; }
+
+/* Footer styling */
+footer {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+footer p {
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+/* SVG elements positioning */
+.topSvg {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    z-index: 1;
+}
+
+.center_svg {
+    position: absolute;
+    right: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.bottomSvg {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    z-index: 1;
+}
+
+/* RTL Support */
+.rtl {
+    direction: rtl;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 15px 0;
+    }
+    
+    .redirect-container {
+        margin: 15px;
+        padding: 25px 20px;
+        max-width: 90%;
+    }
+    
+    .redirect-logo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .redirect-title {
+        font-size: 24px;
+    }
+    
+    .redirect-description {
+        font-size: 14px;
+    }
+    
+    .coupon-code {
+        font-size: 20px;
+    }
+    
+    .redirect-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .info-section {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .info-item {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    main::before {
+        width: 200px;
+        height: 200px;
+    }
+    
+    main::after {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .topSvg {
+        top: -30px;
+        left: -30px;
+    }
+    
+    .center_svg {
+        right: -40px;
+    }
+    
+    .bottomSvg {
+        bottom: -30px;
+        right: -30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .redirect-container {
+        margin: 10px;
+        padding: 25px 15px;
+    }
+    
+    .redirect-logo {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .redirect-title {
+        font-size: 20px;
+    }
+    
+    .redirect-description {
+        font-size: 13px;
+    }
+    
+    .redirect-button {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+}

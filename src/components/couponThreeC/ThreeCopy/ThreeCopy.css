@@ -1,0 +1,93 @@
+.ThreeCopy{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.ThreeCopy_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ThreeCopy_btn input{
+    text-align: center;
+    background: transparent;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23011B3CFF' stroke-width='4' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 10px;
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 125%; /* 30px */
+    width: 189px;
+    height: 65px;
+}
+.ThreeCopy_btn button{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: #000;
+    height: 65px;
+    width: 169px;
+    position: relative;
+    left: -20px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%; /* 25px */
+}
+.visit{
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%; /* 20px */
+    text-decoration-line: underline;
+}
+.getOffer{
+    left: 0 !important;
+    right: 0 !important;
+}
+.getOffer a{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 125%; /* 25px */
+    text-decoration: none;
+}
+@media(max-width:767px){
+    .ThreeCopy_btn input{
+        font-size: 16px;
+        width: 191px;
+        height: 55px;
+
+        height: 65px;
+        width: 189px;
+        position: relative;
+        right: -10px;
+    } 
+    .ThreeCopy_btn button{
+        font-size: 16px;
+        height: 55px;
+        width: 176px;
+        left: -10px;
+
+        height: 65px;
+        width: 169px;
+    }
+    .visit{
+        padding: 20px 15px;
+    }
+    .visit a{
+        color: #FFF;
+        font-size: 16px;
+    }
+}

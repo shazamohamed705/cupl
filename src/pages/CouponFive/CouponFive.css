@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap');
+.couponFive_main{
+    background: linear-gradient(135deg, #FFEAA7 0%, #DDA0DD 50%, #98D8C8 100%);
+    background-size: 300% 300%;
+    animation: rainbowFlow 10s ease infinite;
+    width: 100%;
+    min-height: 100vh !important;
+    direction: rtl;
+    justify-content: flex-start;
+    padding: 15px;
+    font-family: "Noto Sans Arabic", sans-serif !important;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes rainbowFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.couponFive_main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(255, 255, 255, 0.15) 0%, transparent 70%),
+        radial-gradient(circle at 60% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+        radial-gradient(circle at 10% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    animation: bubbleFloat 6s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes bubbleFloat {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(180deg);
+    }
+}
+
+/* RTL/LTR Support */
+.couponFive_main.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.couponFive_main.ltr {
+  direction: ltr;
+  text-align: left;
+}
+.couponFive_main .container{
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px;
+    margin-bottom: 25px;
+    border-radius: 25px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        0 0 50px rgba(255, 234, 167, 0.2);
+    position: relative;
+    z-index: 2;
+    animation: containerBounce 1.5s ease-out;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+     max-width: 76%;
+    margin: 20px auto 25px auto;
+}
+
+@keyframes containerBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) scale(0.8);
+    }
+    60% {
+        transform: translateY(-10px) scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.couponFive_main .container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    border-radius: 25px;
+    animation: shimmerContainer 3s infinite;
+    z-index: -1;
+}
+
+.couponFive_main .container::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #FFEAA7, #DDA0DD, #98D8C8);
+    border-radius: 27px;
+    z-index: -2;
+    opacity: 0.3;
+    animation: fiveContainerBorderGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes fiveContainerBorderGlow {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes shimmerContainer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .couponFive_main {
+        padding: 10px;
+    }
+    
+    .couponFive_main .container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    .couponFive_main::before {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .couponFive_main {
+        padding: 5px;
+    }
+    
+    .couponFive_main .container {
+        padding: 25px 15px;
+        border-radius: 15px;
+        margin: 10px auto 25px auto;
+    }
+    
+    .couponFive_main::before {
+        opacity: 0.3;
+    }
+}

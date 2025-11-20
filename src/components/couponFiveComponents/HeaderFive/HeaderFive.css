@@ -1,0 +1,37 @@
+.HeaderFive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.HeaderFive-img {
+    width: 150px;
+}
+.HeaderFive-img img {
+  max-width: 100%;
+  /* min-height: 100px;
+  max-height: 130px; */
+  object-fit: contain;
+}
+.HeaderFive-text h1 {
+  font-size: 38px;
+  font-weight: 700;
+}
+.HeaderFive-text p {
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  .HeaderFive-text p {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  .HeaderFive-text h1 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .HeaderFive-img {
+    width: 100%;
+  }
+}

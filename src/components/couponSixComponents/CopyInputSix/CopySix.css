@@ -1,0 +1,57 @@
+.CopyInputSix{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.CopySix_btn {
+  border: 1px solid #e6e1fe;
+  /* position: relative; */
+  margin: 20px 0;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}
+.CopySix_btn input {
+    /* background-color: #000; */
+
+  border: none;
+  outline: none;
+  /* padding: 8px ; */
+  text-align: center;
+  color: #212b36;
+  font-family: "cairo";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 100%;
+}
+.CopySix_btn button {
+
+  border: none;
+  outline: none;
+  height: 100%;
+  padding: 10px 0;
+  background: #212b36;
+ 
+  border-radius: 12px 0px 0px 12px;
+  color: #fff;
+  text-align: center;
+  font-family: "cairo";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px; /* 80% */
+  padding: 10px 20px;
+  width: 50%;
+}
+
+.getOfferSix{
+    width: 100% !important;
+    border-radius: 12px !important;
+    height: 66px !important;
+
+}
